@@ -4,7 +4,13 @@ SECRET_KEY = NotImplemented
 
 ALLOWED_HOSTS = []
 
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
+
 INSTALLED_APPS = [
+    # default
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -12,7 +18,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # added
-    "reviews",
+    "rest_framework",
+    "reviews.apps.ReviewsConfig",
 ]
 
 MIDDLEWARE = [

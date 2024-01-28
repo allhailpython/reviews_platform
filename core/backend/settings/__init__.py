@@ -1,4 +1,5 @@
 import os.path
+import sys
 from pathlib import Path
 
 from split_settings.tools import include, optional
@@ -7,6 +8,8 @@ from core.backend.settings.base import SECRET_KEY
 from core.general.utils.pytest import is_pytest_running
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+# point Django where to look for created apps
+sys.path.append(str(BASE_DIR / "core"))
 
 ENV_VAR_SETTINGS_PREFIX = "BACKEND_SETTINGS_"
 
