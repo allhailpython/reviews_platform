@@ -3,7 +3,7 @@ poetry config virtualenvs.in-project true
 
 poetry init // when pyproject.toml does not exist
 
-poetry install // when pyproject.toml exists, generates poetry.lock file
+poetry install --no-root // when pyproject.toml exists, generates poetry.lock file if does not exist
 
 poetry add package // + dependencies
 
