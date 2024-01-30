@@ -1,4 +1,6 @@
-Django v4.2 starter template
+Reviews Platform project with Django v4.2 and Next.js
+
+BACKEND
 
 #####################
 
@@ -31,3 +33,9 @@ create .env. Use .env.example as an example
 make up-dev // start postgres in docker container
 
 make runserver
+
+#####################
+
+FRONTEND
+
+Node.js version check in package.json. Using Volta as node version manager.
