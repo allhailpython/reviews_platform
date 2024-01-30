@@ -10,6 +10,9 @@ from . import views
 router = routers.DefaultRouter()
 router.register(r"users", review_views.UserViewSet)
 router.register(r"groups", review_views.GroupViewSet)
+router.register(r"reviews", review_views.ReviewViewSet)
+router.register(r"categories", review_views.CategoryViewSet)
+router.register(r"businesses", review_views.BusinessViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
