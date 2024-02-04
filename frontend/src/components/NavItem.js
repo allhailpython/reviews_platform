@@ -1,4 +1,4 @@
-export default function ListItem({ children, NavLink }) {
+export default function ListItem({ NavLink, children }) {
   return (
     <>
       <li>
