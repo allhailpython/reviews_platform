@@ -17,7 +17,7 @@ router.register(r"businesses", review_views.BusinessViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", views.home_view, name="home"),
-    path("", include(router.urls)),
+    path("api/", include(router.urls)),
     path("api-auth", include("rest_framework.urls", namespace="rest_framework")),
 ]
 
