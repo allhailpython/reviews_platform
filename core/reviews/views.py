@@ -1,4 +1,5 @@
 from django.contrib.auth.models import Group, User
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import permissions, viewsets
 from reviews.models import Business, Category, Review
 
@@ -32,6 +33,8 @@ class ReviewViewSet(viewsets.ModelViewSet):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["slug"]
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
